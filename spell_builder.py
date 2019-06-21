@@ -15,7 +15,7 @@ def train(features):
 def build_spell_model():
     vocab = build_vocab()
     NWORDS = train(words(vocab.decode('utf-8')))
-    spell_model_path = "C:\\Users\\AKASH OMER\\Downloads\\" + "spell_model"
+    spell_model_path = "C:\\Users\\AKASH\\Downloads\\" + "spell_model"
     with open(spell_model_path, 'wb') as out:
         dill.dump(NWORDS, out)
 
@@ -48,11 +48,11 @@ def extract_vocab(filename,colnames):
     return data
 
 def build_vocab():
-    my_vocab = extract_vocab("C:\\Users\\AKASH OMER\\Downloads\\Kaggle_chats.csv", ["spy","text"])
+    my_vocab = extract_vocab("C:\\Users\\AKASH\\Downloads\\Kaggle_chats.csv", ["spy","text"])
     data = []
     data.extend(my_vocab)
     domain_data = ' '.join(data)
-    with open("C:\\Users\\AKASH OMER\\Downloads\\human_text.txt", 'rb') as myfile:
+    with open("C:\\Users\\AKASH\\Downloads\\human_text.txt", 'rb') as myfile:
         big_text_content = myfile.read()
     vocab = domain_data.encode() +  b" " + big_text_content
     return vocab
