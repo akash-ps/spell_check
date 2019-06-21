@@ -2,7 +2,7 @@
 import dill
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 data_prep_path = "./"
-with open("C:\\Users\\AKASH OMER\Downloads\\" +"spell_model", 'rb') as spell_model:
+with open("C:\\Users\\AKASH\\Downloads\\" +"spell_model", 'rb') as spell_model:
     NWORDS = dill.load(spell_model)
 
 def edits1(word):
